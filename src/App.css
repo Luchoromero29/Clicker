@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pixelify';
+}
+
+@font-face {
+  font-family: 'Pixelify'; /* Nombre de la fuente */
+  src: url('/src/assets/fonts/PixelifySans-VariableFont_wght.ttf') format('woff2'), /* Ruta relativa a la fuente */
+       
+}
+
+a{
+  text-decoration: none;
+}
+
+:root{
+  --color-primary:  rgb(0, 225, 255);
+  --color-secundary: rgb(0, 132, 255);
+  --color-tertiary: rgb(65, 158, 22);
+  --color-quart: rgb(0, 255, 115);
+
+  --color-grey: rgba(206, 206, 206, 0.788);
+  --color-dark-gray: rgb(53, 59, 59);
+  --color-white: rgb(253, 242, 242);
+}

@@ -1,0 +1,36 @@
+.navbar-container{
+    background-color: rgb(53, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-container Link{
+    width: 100%;
+}
+
+.navbar-item {
+    background-color: rgba(206, 206, 206, 0.788);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    min-width: 100px;
+    border-radius: 15px;
+}
+
+.navbar-item span{
+    font-size: 16px;
+    font-family: 'Pixelify';
+    text-decoration: none;
+}
+
+.navbar-item img{
+    width: 30px;
+}
