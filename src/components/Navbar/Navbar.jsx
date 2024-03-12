@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className='navbar-container'>
 
-            <Link to='/'>
+            <Link to=''>
                 <div className='navbar-item'>
                     <img src='/src/assets/icons/icon-home.webp' alt="Home" />
                     <span>Home</span>
