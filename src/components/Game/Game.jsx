@@ -14,7 +14,7 @@ const Game = () => {
 
   const onLoadButton = () => {
     const button = document.getElementById('button-clicker')
-    
+
     button.addEventListener('click', () => {
     button.classList.add("clicked");
 
@@ -25,7 +25,7 @@ const Game = () => {
   }
 
   const handlePoints = () => {
-    setPoints(points + 1);
+    setPoints(points + click);
     ls.setItem('points', points)
   }
 
