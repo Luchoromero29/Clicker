@@ -56,7 +56,7 @@ const Game = (props) => {
 
       <div className='money-container'>
         <div className='money-info'>
-          <img src='src/assets/icons/icon-coin-gold.webp' />
+          <img src="/src/assets/icons/icon-coin-gold.webp" />
           <span>{props.points.toFixed(2)} $</span>
         </div>
 
@@ -64,7 +64,7 @@ const Game = (props) => {
 
       <div className='clicker-container' >
         <button className='button-clicker' id='button-clicker' onClick={handleClicks} >
-          <img src='src/assets/images/planeta-tierra-2.png' onLoad={onLoadGame} />
+          <img src="/src/assets/images/planeta-tierra-2.png" onLoad={onLoadGame} />
         </button>
       </div>
 

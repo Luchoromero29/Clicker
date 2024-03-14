@@ -79,7 +79,7 @@ const Shop = (props) => {
 
       <div className='money-container'>
         <div className='money-info'>
-          <img src='src/assets/icons/icon-coin-gold.webp' />
+          <img src="/src/assets/icons/icon-coin-gold.webp" />
           <span>{props.points.toFixed(2)} $</span>
         </div>
 

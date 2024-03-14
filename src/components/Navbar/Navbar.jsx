@@ -8,13 +8,13 @@ const Navbar = () => {
 
             <Link to=''>
                 <div className='navbar-item'>
-                    <img src='/src/assets/icons/icon-home.webp' alt="Home" />
+                    <img src="/src/assets/icons/icon-home.webp" alt="Home" />
                     <span>Home</span>
                 </div>
             </Link>
             <Link to='/Shop'>
                 <div className='navbar-item'>
-                    <img src='/src/assets/icons/icon-shop.webp' alt="Shop" />
+                    <img src="/src/assets/icons/icon-shop.webp" alt="Shop" />
                     <span>Tienda</span>
                 </div>
             </Link>
