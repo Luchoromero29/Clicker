@@ -28,7 +28,7 @@
     align-items: center;
     outline: 2px solid var(--color-secundary);
     border: none;
-    transition:1s;
+    transition:0.2s;
     animation: rotate 150s linear infinite;
 }
 
@@ -36,7 +36,6 @@
 
 .button-clicker.clicked {
     scale: 1.1;
-
 }
 
 @keyframes rotate {
@@ -58,10 +57,11 @@
     background-color: var(--color-tertiary);
     position: absolute;
     padding: 5px;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 20px;
     border-radius: 10px;
     border: 3px solid var(--color-white);
+    scale: 1.4;
 }
 
 .money-info {
@@ -69,6 +69,13 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    
+    
+}
+
+.money-info span{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
 }
 
 .money-info img {

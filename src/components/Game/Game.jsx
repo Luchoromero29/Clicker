@@ -1,34 +1,54 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Game.css';
 
-const Game = () => {
+const Game = (props) => {
 
+
+
+
+
+  let intervalo;
   //variables 
-  
-  
-  const ls = localStorage;
-  
-  const [points, setPoints] = useState(parseInt(ls.getItem('points')) + 1|| 0);
-  const [ click, setClick] = useState(parseInt(ls.getItem('CLICK') || ls.setItem('CLICK',1)));
-  const [timerPoints, setTimerPoints] = useState(parseInt(ls.getItem('timerPoints')) || ls.setItem('timerPoints', 1))
+  useEffect(() => {
+    handleTimePointer(); 
+    return () => {
+      clearInterval(intervalo); 
+    };
+  }, []);
 
-  const onLoadButton = () => {
+  
+
+  const handleTimePointer = () => {
+    intervalo = setInterval(() => {
+      aumentarPuntos(props.timerPoints);
+    }, 1000)
+  }
+
+
+
+  const onLoadGame = () => {
+
     const button = document.getElementById('button-clicker')
 
     button.addEventListener('click', () => {
-    button.classList.add("clicked");
+      button.classList.add("clicked");
 
-    setTimeout(() => {
-      button.classList.remove("clicked");
-    }, 200);
-  })
+      setTimeout(() => {
+        button.classList.remove("clicked");
+      }, 150);
+    })
   }
 
-  const handlePoints = () => {
-    setPoints(points + click);
-    ls.setItem('points', points)
+  const handleClicks = () => {
+    aumentarPuntos(props.click)
   }
 
+  const aumentarPuntos = (cantidad) => {
+    props.setPoints(prevPoints => {
+      const newPoints = prevPoints + cantidad;
+      return newPoints;
+    });
+  };
 
 
   return (
@@ -37,16 +57,15 @@ const Game = () => {
       <div className='money-container'>
         <div className='money-info'>
           <img src='src/assets/icons/icon-coin-gold.webp' />
-          <span>{points} $</span>
+          <span>{props.points.toFixed(2)} $</span>
         </div>
 
       </div>
 
       <div className='clicker-container' >
-        <button className='button-clicker' id='button-clicker' onClick={handlePoints} >
-          <img src='src/assets/images/planeta-tierra-2.png' onLoad={onLoadButton} />
+        <button className='button-clicker' id='button-clicker' onClick={handleClicks} >
+          <img src='src/assets/images/planeta-tierra-2.png' onLoad={onLoadGame} />
         </button>
-
       </div>
 
     </div>

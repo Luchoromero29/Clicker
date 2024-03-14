@@ -22,6 +22,15 @@ a{
   --color-quart: rgb(0, 255, 115);
 
   --color-grey: rgba(206, 206, 206, 0.788);
-  --color-dark-gray: rgb(53, 59, 59);
+  --color-dark-grey: rgb(53, 59, 59);
   --color-white: rgb(253, 242, 242);
+}
+
+html, body{
+  height: 100%;
+}
+
+#app-container{
+  overflow: hidden;
+  height: 100vh;
 }
