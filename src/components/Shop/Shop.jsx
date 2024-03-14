@@ -54,13 +54,13 @@ const Shop = (props) => {
         })
 
         props.setPriceClick(prevPrice => {
-          const newPrice = prevPrice * (1 - props.descount);
+          const newPrice = prevPrice - (prevPrice * 0.02);
           console.log(props.descount);
           console.log(`precio de click ${newPrice}`);
           return newPrice
         })
         props.setPriceTimerPoint(prevPrice => {
-          const newPrice = prevPrice * (1 - props.descount);
+          const newPrice = prevPrice - (prevPrice * 0.02);
           console.log(`precio de tiemrPoints ${newPrice}`);
           return newPrice
         })
