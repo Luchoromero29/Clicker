@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Game from './components/Game/Game';
 import Shop from './components/Shop/Shop';
+import imageBackground from "./assets/images/fondo-shop.png"
 
 
 
@@ -21,7 +22,7 @@ function App() {
   return (
     <Router>
       <div id='app-container'>
-      <img id='img-fondo-shop' src='src/assets/images/fondo-shop.png'/>
+      <img id='img-fondo-shop' src={imageBackground}/>
         <Routes>
           <Route path="" element={<Game
             points={points} setPoints={setPoints}

@@ -1,6 +1,8 @@
 import './Navbar.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import iconHome from "../../assets/icons/icon-home.webp"
+import iconShop from "../../assets/icons/icon-shop.webp"
 
 const Navbar = () => {
     return (
@@ -8,13 +10,13 @@ const Navbar = () => {
 
             <Link to=''>
                 <div className='navbar-item'>
-                    <img src="/src/assets/icons/icon-home.webp" alt="Home" />
+                    <img src={iconHome} alt="Home" />
                     <span>Home</span>
                 </div>
             </Link>
             <Link to='/Shop'>
                 <div className='navbar-item'>
-                    <img src="/src/assets/icons/icon-shop.webp" alt="Shop" />
+                    <img src={iconShop} alt="Shop" />
                     <span>Tienda</span>
                 </div>
             </Link>

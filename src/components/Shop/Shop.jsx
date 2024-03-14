@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import './Shop.css';
+import iconMoney from "../../assets/icons/icon-coin-gold.webp"
 
 const Shop = (props) => {
-
-
-
 
   const aumentarClick = () => {
     if (props.points >= props.priceClick) {
@@ -34,7 +32,7 @@ const Shop = (props) => {
       props.setPoints(points)
 
       props.setPriceTimerPoint(prevPrice => {
-        const newPrice = Math.floor(prevPrice  + prevPrice * 1.30 * (1 - props.descount));
+        const newPrice = Math.floor(prevPrice + prevPrice * 1.30 * (1 - props.descount));
         return newPrice;
       })
     }
@@ -79,7 +77,7 @@ const Shop = (props) => {
 
       <div className='money-container'>
         <div className='money-info'>
-          <img src="/src/assets/icons/icon-coin-gold.webp" />
+          <img src={iconMoney} />
           <span>{props.points.toFixed(2)} $</span>
         </div>
 
