@@ -1,6 +1,7 @@
 {
   "name": "clicker",
   "private": true,
+  "homepage": "https://luchoromero29.github.io/Clicker/build",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
