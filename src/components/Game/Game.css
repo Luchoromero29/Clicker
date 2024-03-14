@@ -51,6 +51,7 @@
 .button-clicker img {
     width: 375px;
     border-radius: 100%;
+    user-select: none;
 }
 
 .money-container {
